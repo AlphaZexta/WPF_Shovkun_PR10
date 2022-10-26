@@ -27,12 +27,17 @@ namespace WPF_Shovkun_PR10
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            listbox1.Items.Add(textbox1.Text);
+            listBox1.Items.Add(textBox1.Text);
         }
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
-            listbox1.Items.Remove(textbox1.Text);
+            listBox1.Items.Remove(textBox1.Text);
+        }
+
+        private void Sort_Click(object sender, RoutedEventArgs e)
+        {
+            listBox1.Items.SortDescriptions.Add(new System.ComponentModel.SortDescription("Content", System.ComponentModel.ListSortDirection.Ascending));
         }
     }
 }
